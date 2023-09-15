@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://7d5b1amqcoct"]
+
+[ext_resource type="Script" path="res://script/main.gd" id="1_4dvq5"]
+[ext_resource type="PackedScene" uid="uid://clcfe3wjfw5l3" path="res://scene/board.tscn" id="1_odf06"]
+[ext_resource type="PackedScene" uid="uid://t3sjimql01l" path="res://scene/zero.tscn" id="2_x1yib"]
+[ext_resource type="PackedScene" uid="uid://ccfhpnmra7j6s" path="res://scene/x.tscn" id="3_gomtw"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4dvq5")
+circle_scene = ExtResource("2_x1yib")
+cross_scene = ExtResource("3_gomtw")
+
+[node name="Board" parent="." instance=ExtResource("1_odf06")]
+position = Vector2(300, 300)
+
+[node name="X" parent="." instance=ExtResource("3_gomtw")]
